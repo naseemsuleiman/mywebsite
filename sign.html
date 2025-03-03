@@ -12,23 +12,87 @@
     />
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+   .nav-item{
+      margin-left: 90%;
+    }
+    .nav-link {
+        color: white !important;
+  
+      }
+      .nav-link:hover {
+        color: #b78e00 !important;
+      }
+      .navbar-brand img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+      .nav-underline .nav-link {
+            position: relative;
+        }
+        .nav-underline .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: #b78e00;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-underline .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+        .navbar ul li {
+  margin: 0 15px;
+}
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(58, 58, 58, 0.37) !important;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+</style>
 <body>
 
-    <nav class="navbar">
-        <img  src="Boucelle Collective.png" alt="Logo">
-        <button class="menu-toggle">&#9776;</button>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="room.html">Rooms</a></li>
-            <li><a href="dining.html">Dining</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="Boucelle Collective.png" alt="The Eventor Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav nav-underline">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="room.html">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <!-- <button  class="button"> <a href="book.html">Book Online</a> </button> -->
         </ul>
-        <button class="button"> <a href="book.html">Book Online</a> </button>
-    </nav><br><br><br><br>
-    <!-- Section: Design Block -->
+        
+        </div>
+    </div>
+</nav><br><br><br><br>
 <section class="text-center text-lg-start">
     <style>
       .cascading-right {
@@ -95,7 +159,7 @@
   
                 <!-- Register buttons -->
                 <div class="text-center">
-                  <p>or sign up with:</p>
+                  
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
                     <i class="fab fa-facebook-f"></i>
                   </button>
